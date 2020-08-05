@@ -17,8 +17,11 @@
         </div>
         <div class="left">
             <div class="search">
-                <input type="text" name="secrch" placeholder="Search our store"/>
-                <a href="https://www.google.com" target="_blank"><i style="color: darkgray;margin-left: 10px" class="fas fa-search"></i></a>
+                <input type="text" name="input" placeholder="  Search our store" onkeyup="up(this)"/>
+                <div id="search">
+                    <a href="https://www.google.com" target="_blank">
+                        <i style="color: darkgray;margin-left: 10px" class="fas fa-search"></i></a>
+                </div>
             </div>
             <div class="seo">
                 <img src="/imgs/imgseo.jpg">
@@ -98,5 +101,14 @@
     </div>
 </section>
 <%- include('footbp.ejs'); %>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+    function up(e) {
+        var s = e.value;
+        $("#search").html("<a href=\"http://www.google.com/search?q="+s+"\" target=\"_blank\">" +
+            "<i style=\"color: darkgray;margin-left: 10px\" class=\"fas fa-search\">" +
+            "</i></a>");
+    };
+</script>
 </body>
 </html>
