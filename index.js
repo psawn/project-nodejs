@@ -25,11 +25,10 @@ app.get("/blogpage/:pg",function (req,res) {
     let cats=fs.readFileSync("data/blogdt.json","UTF-8");
     cats=JSON.parse(cats);
     let p = req.params.pg;
-    console.log(p);
     let count = 0
     cats.map(e=>{
         count++;
-        if((e.num+2)/3 == p){
+        if((cats.length-e.num+3)/3 == p){
             res.render("blogpage",{
                 cats : cats,
                 id : parseInt(p)
