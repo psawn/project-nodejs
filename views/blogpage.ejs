@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogpage</title>
+    <link rel="stylesheet" type="text/css" href="/css/hfbp.css">
+    <link rel="stylesheet" type="text/css" href="/css/blog.css">
+    <link rel="stylesheet" href="/lib/Icon/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+<%- include('headbp.ejs'); %>
+<section class="section">
+    <div class="container">
+        <div class="head">
+            <img src="/imgs/imghead.jpg">
+        </div>
+        <div class="left">
+            <div class="search">
+                <input type="text" name="secrch" placeholder="Search our store"/>
+                <a href="https://www.google.com" target="_blank"><i style="color: darkgray;margin-left: 10px" class="fas fa-search"></i></a>
+            </div>
+            <div class="seo">
+                <img src="/imgs/imgseo.jpg">
+                <p> <br/><h3>Kathy Gibson</h3>
+                <br/>Head of Director, SEO
+                </p>
+            </div>
+            <div class="recent">
+                <h3>Recent Post</h3>
+                <% for(var i=0;i<4;i++) { %>
+                    <div class="image">
+                        <img src="<%= cats[i].image %>">
+                    </div>
+                    <div class="list">
+                        <a href="#"><%= cats[i].title %></a>
+                        <p class="date"><%= cats[i].date %></p>
+                    </div>
+                <% } %>
+            </div>
+            <div class="other">
+                <h2>Instagram</h2>
+                <h2>Follow Us</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-skype"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <% for(var i=((id-1)*3);i<id*3&&i<cats.length;i++) { %>
+            <div class="page">
+                <div style="background-image: url(<%= cats[i].image %>)" class="gallery">
+                </div>
+                <p><br/>
+                    <h1><a href="#"><%= cats[i].title %></a></h1>
+                    <br/> <i><%= cats[i].date %> / </i> <i style="color: green"><%= cats[i].aut %></i><br/>
+                    <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud reprhendit in voluptate
+                    velit esse exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor...
+                    <br/>
+                    <br/>
+                </p>
+                <div class="more">
+                    <a href="#">------ Read More</a>
+                </div>
+                <div class="share">
+                    <p>Share : <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-google-plus"></i></a>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+            <div class="roll">
+                <% if (id==1){ %>
+                    <a href="#">< Prev</a>
+                <% }else{ %>
+                    <a href="/blogpage/<%= (id-1) %>">< Prev</a>
+                <% } %>
+                <% for(var i=0;i<cats.length/3;i++) { %>
+                    <% if (i==(id-1)){ %>
+                        <a href="/blogpage/<%= i+1 %>" style="background-color: green"><%= i+1 %></a>
+                    <% }else{ %>
+                        <a href="/blogpage/<%= i+1 %>"><%= i+1 %></a>
+                    <% } %>
+                <% } %>
+                <% if (cats.length/3>id){ %>
+                    <a href="/blogpage/<%=(id+1)%>">< Next</a>
+                <% }else{ %>
+                    <a href="#">< Next</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('footbp.ejs'); %>
+</body>
+</html>

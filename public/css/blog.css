@@ -1,0 +1,124 @@
+.section .head{
+    width: 100%;
+    height: 300px;
+}
+.section .head img{
+    width: 100%;
+    height: 100%;
+}
+.section .left{
+    float: left;
+    width: 30%;
+    padding: 100px 10px 100px 100px;
+}
+.section .left .search{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.5);
+    text-align: center;
+    font-size: 15px;
+    transition: all 150ms;
+}
+.section .left .search input[type=text]{
+    background-color: rgba(211, 211, 211, 0.1);
+    border: none;
+    height: 25px;
+}
+.section .left .search:hover i{
+    transform: scale(1.5);
+    color: darkgrey;
+}
+.section .left .seo{
+    width: 100%;
+    margin-top: 40px;
+}
+.section .left .seo img{
+    width: 100%;
+    height: 280px;
+}
+.section .left .recent{
+    float: left;
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.section .left .image{
+    float: left;
+    width: 25%;
+    height: 70px;
+    padding: 10px 0;
+}
+.section .left .image img{
+    width: 100%;
+    height: 50px;
+}
+.section .left .list{
+    float: left;
+    width: 75%;
+    height: 70px;
+    padding: 10px 10px 10px 20px;
+}
+.section .left .recent h3{
+    margin-bottom: 10px;
+}
+.section .left .recent p{
+    color: darkgrey;
+}
+.section .left .other{
+    margin-top: 20px;
+}
+.section .left .other h2{
+    font-weight: 550;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.section .left .other i{
+    font-size: 25px;
+    margin-right: 15px;
+}
+.section .right{
+    float: left;
+    padding: 100px 100px 50px 20px;
+    width: 70%;
+}
+.section .right .page{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.section .right .page h1:hover a{
+    font-size: 26px;
+}
+.section .right .page .gallery{
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+}
+.section .right .page .more{
+    float: left;
+    width: 50%;
+}
+.section .right .page .share{
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+.section .right .page .share i{
+    margin-left: 10px;
+}
+.section .right .roll{
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 20px 0 20px 30px;
+}
+.section .right .roll a{
+    padding: 10px;
+    background-color: lightgray;
+    margin-right: 5px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.75);
+}
+.section .right .roll a:hover{
+    background-color: green;
+    font-size: 14px;
+}
