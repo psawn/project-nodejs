@@ -43,6 +43,11 @@
     width: 100%;
     margin-bottom: 40px;
 }
+.section .left .post{
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
 .section .left .image{
     float: left;
     width: 25%;

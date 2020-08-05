@@ -28,7 +28,8 @@
             </div>
             <div class="recent">
                 <h3>Recent Post</h3>
-                <% for(var i=0;i<4;i++) { %>
+                <div class="post">
+                <% for(var i=0;i<6;i++) { %>
                     <div class="image">
                         <img src="<%= cats[i].image %>">
                     </div>
@@ -37,6 +38,7 @@
                         <p class="date"><%= cats[i].date %></p>
                     </div>
                 <% } %>
+                </div>
             </div>
             <div class="other">
                 <h2>Instagram</h2>
