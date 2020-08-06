@@ -1,6 +1,6 @@
 @keyframes move1 {
     from {
-        margin-left: 100px;
+        margin-left: 200px;
         opacity: 0;
     }
     to {
@@ -10,7 +10,7 @@
 }
 @keyframes move2 {
     from {
-        margin-left: -100px;
+        margin-left: -200px;
         opacity: 0;
     }
     to {
@@ -28,13 +28,13 @@
     font-weight: 600;
     padding: 170px 0;
     text-align: center;
-    animation: move1 1s;
+    animation: move1 2s;
 }
 .section .left{
     float: left;
     width: 30%;
     padding: 50px 10px 50px 50px;
-    animation: move2 1s;
+    animation: move2 2s;
 }
 .section .left .search{
     width: 100%;
@@ -120,7 +120,7 @@
     float: left;
     padding: 50px 50px 50px 20px;
     width: 70%;
-    animation: move2 1s;
+    animation: move2 2s;
 }
 .section .right .page{
     width: 100%;
