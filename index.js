@@ -26,16 +26,16 @@ app.get("/blogpage/:pg",function (req,res) {
     cats=JSON.parse(cats);
     let p = req.params.pg;
     let count = 0
-    cats.map(e=>{
+    for (var i=0;i<cats.length;i++){
         count++;
-        if((cats.length-e.num+2)/2 == p){
+        if((i+2)/2 == p){
             res.render("blogpage",{
                 cats : cats,
                 id : parseInt(p)
             });
             count = 0;
         };
-    });
+    };
     if(count>=cats.length){
         res.send("Khong tim thay");
     };
