@@ -8,15 +8,11 @@ app.listen(PORT,function () {
 
 app.use(express.static("public"));
 app.set("view engine","ejs");
-var counter = 0;
 
 const fs = require("fs");
-
 app.get("/",function (req,res) {
     res.render("home-project");
 })
-
-// code blogpage
 app.get("/blogpage",function (req,res) {
     let cats=fs.readFileSync("data/blogdt.json","UTF-8");
     cats=JSON.parse(cats);
@@ -44,3 +40,4 @@ app.get("/blogpage/:pg",function (req,res) {
         res.send("Khong tim thay");
     };
 })
+
