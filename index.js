@@ -28,7 +28,7 @@ app.get("/blogpage/:pg",function (req,res) {
     let count = 0
     cats.map(e=>{
         count++;
-        if((cats.length-e.num+3)/3 == p){
+        if((cats.length-e.num+2)/2 == p){
             res.render("blogpage",{
                 cats : cats,
                 id : parseInt(p)
@@ -40,4 +40,3 @@ app.get("/blogpage/:pg",function (req,res) {
         res.send("Khong tim thay");
     };
 })
-
