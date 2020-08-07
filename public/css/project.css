@@ -20,7 +20,7 @@ body {
     margin: auto;
 }
 .header {
-    padding: 30px;
+    padding-top: 30px;
     height: 100px;
     background-color: #ffffff;
 }
@@ -32,7 +32,7 @@ body {
 }
 .header ul li {
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
     list-style: none;
 }
 .header ul li a {
@@ -149,7 +149,6 @@ div.sale .discount h5 {
     font-size: 14px;
 }
 .lasted_product {
-    margin-left: 50px;
     text-align: center;
     width: 1250px;
     height: 725px;
@@ -335,7 +334,6 @@ div.sale .discount h5 {
     background-color: #519f10;
 }
 .lasted_new {
-    margin-left: 50px;
     width: 1250px;
     height: 960px;
     background-image: url(../imgs/background_img_lasted_products.webp);
@@ -352,6 +350,36 @@ div.sale .discount h5 {
     margin: 25px 35px 100px;
     width: 345px;
     line-height: 1.5;
+}
+.block {
+    position: relative;
+}
+.block .color-background{
+    width: 347px;
+    height: 376px;
+    background-color: #000000;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.block:hover .color-background {
+    opacity: 0.3;
+}
+.block .rotate-icon {
+    color: #ffffff;
+    font-size: 50px;
+    position: absolute;
+    top: calc((100% / 2) - 50px);
+    left: calc((100% /2) - 25px);
+    opacity: 0;
+    transform: scale(0);
+    transition: 1.5s;
+}
+.block:hover .rotate-icon {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
 }
 .new .date {
     width: 100%;
@@ -379,18 +407,57 @@ div.sale .discount h5 {
     transition: 0.4s;
 }
 a.read_more {
-    font-size: 12px;
+    color: rgba(81, 159, 16, 0.85);
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
-    color: #484848;
     font-weight: 600;
-    border-bottom: 1px solid #484848;
     text-decoration: none;
-    transition: 0.4s;
+
+    position:absolute;
+    font-size: 14px;
+    border: 3px solid rgba(81, 159, 16, 0.85);
+    border-radius: 16px;
+    padding:10px;
+    text-align: center;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
 }
-a.read_more:hover , .new_title a:hover {
+.read_more span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #54ad10;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+.read_more:hover span {
+    transform: translateY(0) scale(2);
+}
+.read_more span:nth-child(1) {
+    --n: 1;
+}
+.read_more span:nth-child(2) {
+    --n: 2;
+}
+.read_more span:nth-child(3) {
+    --n: 3;
+}
+.read_more span:nth-child(4) {
+    --n: 4;
+}
+.new_title a:hover {
     color: #519f10;
-    border-color: #519f10;
+}
+a.read_more:hover  {
+    color: #ffffff;
+}
+.new_title a:hover {
+    color: #519f10;
 }
 .footer {
     float: left;
