@@ -11,8 +11,12 @@ body {
     color: #343132;
     background-color: #ffffff;
 }
-.container {
+.section {
+    float: left;
     width: 100%;
+}
+.container {
+    width: 1250px;
     margin: auto;
 }
 .header {
