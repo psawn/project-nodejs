@@ -81,7 +81,7 @@
             <% } %>
             <div class="roll">
                 <% if (id==1){ %>
-                    <a href="#">< Prev</a>
+                    <a>< Prev</a>
                 <% }else{ %>
                     <a href="/blogpage/<%= (id-1) %>">< Prev</a>
                 <% } %>
@@ -95,7 +95,7 @@
                 <% if (cats.length/2>id){ %>
                     <a href="/blogpage/<%=(id+1)%>">Next ></a>
                 <% }else{ %>
-                    <a href="#">Next ></a>
+                    <a>Next ></a>
                 <% } %>
             </div>
         </div>
