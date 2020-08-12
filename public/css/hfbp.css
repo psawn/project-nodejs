@@ -12,7 +12,7 @@ body{
     width: 100%;
 }
 .container{
-    width: 1200px;
+    width: 1250px;
     margin: 0 auto;
 }
 .section a{
@@ -28,23 +28,18 @@ body{
 }
 .header .logo{
     float: left;
-    padding: 30px 0;
-}
-.header .logo img{
-    height: 40px;
+    padding: 30px 0 0 50px;
 }
 .header .menu{
     float: left;
     height: 100px;
-    width: 50%;
-    padding: 40px 0;
+    padding: 35px 0;
 }
 .header .menu li{
-    font-size: 15px;
     float: left;
     list-style: none;
-    margin-left: 40px;
-    font-weight: 600;
+    margin-left: 30px;
+    font-weight: 900;
 }
 .header li {
     position: relative;
@@ -61,15 +56,40 @@ body{
 .header li:hover div {
     width: 100%;
 }
-.footer .contact{
+.footer {
     float: left;
-    width: 25%;
-    height: 350px;
-    background-color: rgba(211, 211, 211, 0.5);
-    padding: 50px 50px 50px 50px;
-    opacity: 0.7;
+    background-color: #f6f6f6;
+    margin-top: 50px;
+    font-family: Lora, serif;
 }
-.footer .contact i{
-    font-size: 20px;
-    margin-right: 10px;
+.footer .contact {
+    width: 23%;
+    float: left;
+    margin: 40px 0 0 23px;
+    font-family: "Playfair Display",serif;
+}
+.footer .contact div {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.footer .contact ul li {
+    list-style: none;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+.footer .social i {
+    font-size: 15px;
+    background: #000000;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.footer .social i:hover {
+    background-color: #519f10;
 }
